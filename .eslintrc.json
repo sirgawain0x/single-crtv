@@ -1,12 +1,14 @@
 {
-  "extends": [
-    "next/core-web-vitals",
-    "prettier"
-  ],
-  "plugins": [
-    "prettier"
-  ],
+  "extends": "next/core-web-vitals",
   "rules": {
-    "prettier/prettier": ["error"]
-  }
+    "max-len": ["error", { "code": 150 }]
+  },
+  "overrides": [
+    {
+      "files": ["components/ui/**/*.{ts,tsx}"],
+      "rules": {
+        "max-len": "off"
+      }
+    }
+  ]
 }
